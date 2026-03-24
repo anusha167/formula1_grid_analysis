@@ -1,0 +1,191 @@
+/* ── Reset & Base ────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #0d0d0d;
+  --surface:  #1a1a1a;
+  --card:     #242424;
+  --border:   #2e2e2e;
+  --accent:   #e8002d;
+  --accent2:  #ff8c00;
+  --text:     #f0f0f0;
+  --muted:    #888888;
+  --blue:     #00aaff;
+  --radius:   10px;
+  --shadow:   0 4px 24px rgba(0,0,0,0.5);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ── Page wrapper ────────────────────────────────────────────────── */
+.page { max-width: 1280px; margin: 0 auto; padding: 0 24px 60px; }
+
+/* ── Header ──────────────────────────────────────────────────────── */
+.header {
+  background: linear-gradient(135deg, #0d0d0d 60%, #1a0008 100%);
+  border-bottom: 2px solid var(--accent);
+  padding: 28px 0 22px;
+  margin: 0 -24px 40px;
+  padding-left: 24px; padding-right: 24px;
+}
+.header-inner { max-width: 1280px; margin: 0 auto; }
+.logo { display: flex; align-items: baseline; gap: 4px; margin-bottom: 6px; }
+.logo-f1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+.logo-sub {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+.header-tagline { color: var(--muted); font-size: 0.95rem; max-width: 540px; }
+
+/* ── Sections ────────────────────────────────────────────────────── */
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow);
+}
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  border-left: 3px solid var(--accent);
+  padding-left: 12px;
+}
+.section-desc { color: var(--muted); font-size: 0.875rem; margin-bottom: 20px; padding-left: 15px; }
+
+/* ── Stat banner ─────────────────────────────────────────────────── */
+.stat-banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.stat-banner.mini {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  margin-bottom: 20px;
+}
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-align: center;
+}
+.stat-card.mini { padding: 12px 14px; }
+.stat-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.stat-value { font-size: 2rem; font-weight: 800; line-height: 1; }
+.stat-value.accent  { color: var(--accent); }
+.stat-value.accent2 { color: var(--accent2); }
+.stat-card.mini .stat-value { font-size: 1.3rem; }
+.stat-sub { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
+
+/* ── Controls ────────────────────────────────────────────────────── */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+  align-items: flex-end;
+}
+.controls.two-col { gap: 24px; }
+.controls.two-col .control-group { flex: 1; min-width: 220px; }
+
+.control-group { display: flex; flex-direction: column; gap: 6px; min-width: 240px; flex: 1; }
+.control-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+}
+.control-label.red  { color: var(--accent); }
+.control-label.blue { color: var(--blue); }
+
+/* ── Chart grid ──────────────────────────────────────────────────── */
+.chart-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+@media (max-width: 768px) { .chart-grid-2 { grid-template-columns: 1fr; } }
+
+/* ── Comparison cards ────────────────────────────────────────────── */
+.compare-stat-row {
+  margin-bottom: 20px;
+}
+.cmp-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  text-align: center;
+}
+.cmp-values { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 4px; }
+.cmp-val { font-size: 1.1rem; font-weight: 700; color: var(--muted); }
+.cmp-val.red  { color: var(--accent); }
+.cmp-val.blue { color: var(--blue); }
+.cmp-val.winner { font-size: 1.25rem; text-shadow: 0 0 10px currentColor; }
+.cmp-vs { font-size: 0.7rem; color: var(--muted); }
+
+/* ── Dropdown styling ────────────────────────────────────────────── */
+.Select-control, .Select-menu-outer {
+  background-color: var(--card) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+.Select-value-label, .Select-placeholder { color: var(--text) !important; }
+.Select-option { background: var(--card) !important; color: var(--text) !important; }
+.Select-option:hover, .Select-option.is-focused {
+  background: var(--border) !important;
+}
+.Select-arrow { border-top-color: var(--muted) !important; }
+
+/* Dash dropdown overrides */
+.dash-dropdown .Select-control {
+  background: var(--card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 6px !important;
+}
+
+/* ── Range slider ────────────────────────────────────────────────── */
+.rc-slider-track { background-color: var(--accent) !important; }
+.rc-slider-handle { border-color: var(--accent) !important; background: var(--accent) !important; }
+.rc-slider-rail { background: var(--border) !important; }
+
+/* ── Footer ──────────────────────────────────────────────────────── */
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  padding: 24px 0 0;
+  border-top: 1px solid var(--border);
+  margin-top: 20px;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
