@@ -149,7 +149,7 @@ body {
 
 /* ── Dropdown styling ────────────────────────────────────────────── */
 .Select-control, .Select-menu-outer {
-  background-color: var(--card) !important;
+  background-color: #242424 !important;
   border-color: var(--border) !important;
   color: var(--text) !important;
 }
