@@ -9,7 +9,9 @@ This is an interactive data analytics dashboard exploring the relationship betwe
 
 ## Table of Contents
 - [Motivating Question](#motivating-question)
-- [Getting Started](#getting-started)
+- [Why I built this](#why-i-built-this)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
 - [Dataset](#dataset)
 
 
@@ -22,6 +24,7 @@ Last quarter, I took a class where we explored correlational analysis using Pyth
 I'm wasn't an F1 fan to begin with. But I figured the best way to learn about something new is to dig into the data yourself. What better way to understand a sport than to let the numbers tell the story?
 
 So I took a dataset spanning 75 years of Formula 1 racing and turned it into something I could actually interact with. Along the way, I became genuinely curious about the patterns I was finding.
+
 ## Features
 - **General Correlation Analysis:** Pearson correlation between grid and finishing position
 - **Individual Driver Analysis:** Select any driver, filter by year range, scatterplot, and season-by-season trend
