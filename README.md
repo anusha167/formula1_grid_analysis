@@ -33,6 +33,7 @@ So I took a dataset spanning 75 years of Formula 1 racing and turned it into som
 ## Tech Stack
 - Python
 - Pandas
+- Numpy
 - Plotly
 - Plotly Dash
 - SciPy
